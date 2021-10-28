@@ -1,0 +1,31 @@
+{%extends "layout.html"%}
+{% block content %}
+<div class="pythag">
+     <h2>Pythagorean Theorum Calculator</h2>
+</div>
+
+<div class="form_input">
+     <img src="/static/images/pythag.png">
+     <p>Input any side of the triangle to receive the rest. (Enter atleast 2 forms)</p>
+
+     <form action="{{ url_for('pythag_post') }}" method="post">
+
+     <label for="A value:">A: </label>
+     <input type="text" id="a-pythag" name="a-pythag" placeholder="">
+     <label for="B value:">B: </label>
+     <input type="text" id="b-pythag" name="b-pythag" placeholder="">
+     <label for="C value:">C: </label>
+     <input type="text" id="c-pythag" name="c-pythag" placeholder="">
+     <button type="reset">Reset</button>
+     <button type="submit"> Calculate </button>
+
+
+
+     <h3>{{ result }}</h3>
+
+     </form>
+
+
+</div>
+
+{%endblock%}

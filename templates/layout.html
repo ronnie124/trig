@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Math Calculators</title>
+      <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+  </head>
+  <body>
+    <header>
+
+      <div class="container">
+         <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+                <a style="pointer: cursor;" onclick="say_hello()">Algebra</a>
+
+                <a href="{{ url_for('trigonometry') }}">Trigonometry</a>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('forum_home') }}">Forum</a>
+         </div>
+
+        <strong><nav>
+
+          <ul class="menu">
+              <span onclick="openNav()">&#9776; MENU</span>
+              <span onclick="onpressHome()">HOME</span>
+              <span onclick="openContact()">CONTACT US</span>
+
+          </ul>
+
+        </nav></strong>
+          <div id="popup">
+              <h2>PUSH</h2>
+          </div>
+      </div>
+    </header>
+    <div class="container">
+        {%block content%}
+        {%endblock%}
+    </div>
+
+<script src="{{url_for('static',filename='post_handle')}}"></script>
+
+    <div class="fixed">
+      <h5>Website created by Ronald Morris</h5>
+    </div>
+  </body>
+</html>

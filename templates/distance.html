@@ -1,0 +1,31 @@
+{%extends "layout.html"%}
+{% block content %}
+<div class="pythag">
+     <h2>Distance Formula Calculator</h2>
+</div>
+
+<div class="form_input">
+     <img src="/static/images/the_distance_formula.png">
+     <p>Please fill in both vertices.</p>
+
+     <form action="{{ url_for('distance_post') }}" method="post">
+
+     <label for="X1">X1: </label>
+     <input type="text" id="x1" name="x1" placeholder="">
+     <label for="X2">X2: </label>
+     <input type="text" id="x2" name="x2" placeholder="">
+     <label for="Y1">Y1: </label>
+     <input type="text" id="y1" name="y1" placeholder="">
+     <label for="Y2">Y2: </label>
+     <input type="text" id="y2" name="y2" placeholder="">
+     <button type="reset">Reset</button>
+     <button type="submit"> Calculate </button>
+
+     <h3>{{ result }}</h3>
+
+     </form>
+
+
+</div>
+
+{%endblock%}

@@ -1,0 +1,35 @@
+{%extends "layout.html"%}
+{% block content %}
+
+<div class="form_input_radio">
+     <h2>Sector Area Calculator</h2>
+     <p>Select a unit of measurement and input atleast two different values to calculate your problem.</p>
+     <label for="inches">YARDS (yd.): </label>
+     <input type="radio" onclick = "takeInput()" id="yards" name="measurement"  value="yards">
+     <label for="inches">FEET (ft.): </label>
+     <input type="radio" onclick = "takeInput()" id="feet" name="measurement" value="feet">
+     <label for="inches">INCHES (in.): </label>
+     <input type="radio" onclick= "takeInput()" id="inches" name="measurement" checked="checked" value="inches"><br>
+</div>
+
+<div class="form_input_text">
+     <label for="sectorarea">Sector Area: </label>
+     <input type="text" onkeyup="takeInput()" id="sectorarea" name="sectorarea" placeholder="sectorarea">
+     <label for="sectorarea">in²</label><br>
+     <label for="centralangle">Central Angle: </label>
+     <input type="text" onkeyup="takeInput()" id="centralangle" name="centralangle" placeholder="centralangle"><br>
+     <label for="radius">Radius: </label>
+     <input type="text" onkeyup="takeInput()" id="radius" name="radius" placeholder="radius"><br>
+     <label for="arclength">Arc Length: </label>
+     <input type="text" onkeyup="takeInput()" id="arclength" name="arclength" placeholder="arclength"><br>
+     <label for="chordlength">Chord Length: </label>
+     <input type="text" onkeyup="takeInput()" id="chordlength" name="chordlength" placeholder="chordlength"><br>
+     <label for="diameter">Diameter: </label>
+     <input type="text" onkeyup="takeInput()" id="diameter" name="diameter" placeholder="diameter"><br><br>
+
+     <h1>{{ result }}</h1>
+
+</div>
+
+
+{%endblock%}

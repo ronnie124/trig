@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+{% block content %}
+<div class="home">
+     <h1>Trigonometry Calculators</h1>
+</div>
+
+<div class="links">
+     <h3>
+     <li><a href="{{ url_for('pythag_get') }}">Pythagorean Theorum</a></li>
+     <li><a href="{{ url_for('sectorarea_get') }}">Sector Area</a></li>
+     <li><a href="{{ url_for('distance_get') }}">Distance Calculator (verteces)</a></li>
+     </h3>
+</div>
+
+{%endblock%}

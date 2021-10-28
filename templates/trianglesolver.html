@@ -1,0 +1,29 @@
+{%extends "layout.html"%}
+{% block content %}
+
+<div class="form_input_radio">
+     <h2>Triangle Solver</h2>
+     <h3>Input atleast 3 values to solve for the whole triangle.</h3>
+</div>
+
+<div class="form_input_text">
+     <label for="A">A: </label>
+     <input type="text" id="A-angle" name="A" placeholder="angle">
+     <label for="B">B: </label>
+     <input type="text" id="B-angle" name="B" placeholder="angle"><br>
+     <label for="C">C: </label>
+     <input type="text" id="C-angle" name="C" placeholder="angle"><br>
+     <label for="a">a: </label>
+     <input type="text" id="a-side" name="a" placeholder="side"><br>
+     <label for="b">b: </label>
+     <input type="text" id="b-side" name="b" placeholder="side"><br>
+     <label for="diameter">c: </label>
+     <input type="text" id="c-side" name="c" placeholder="side"><br><br>
+
+
+     <h1>{{ result }}</h1>
+
+</div>
+
+
+{%endblock%}

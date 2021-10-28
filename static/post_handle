@@ -1,0 +1,53 @@
+
+// This file contains and handles all post requests in order to mainstream and make data transfers identical.
+
+//Function that takes input from user textbox and json's the data.
+function takeInput(){
+
+    var math_values = {};
+    var http = new XMLHttpRequest();
+    http.open('POST', "/sectorarea", true);
+    http.setRequestHeader('Content-type', 'application/json');
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            console.log("Successful attempt at POST.");
+        }
+    }
+
+   var ele = document.getElementsByName('measurement');
+   for(i = 0; i < ele.length; i++) {
+        if(ele[i].type="radio") {
+            if(ele[i].checked) {
+                math_values["measurement"] = ele[i].value;
+            };
+        };
+   };
+
+    math_values["centralangle"] = document.getElementById("centralangle").value;
+    math_values["chordlength"] = document.getElementById("chordlength").value;
+    math_values["sectorarea"] = document.getElementById("sectorarea").value;
+    math_values["arclength"] = document.getElementById("arclength").value;
+    math_values["diameter"] = document.getElementById("diameter").value;
+    math_values["radius"] = document.getElementById("radius").value;
+
+    http.send(JSON.stringify(math_values));
+
+}
+
+
+function onpressHome() {
+  window.location.replace("/")
+}
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  document.getElementById("popup").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("popup").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+  document.getElementById("popup").style.display = "none";
+}

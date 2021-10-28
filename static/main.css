@@ -1,0 +1,175 @@
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+    background: rgb(83,78,77);
+    background: linear-gradient(90deg, rgba(83,78,77,1) 9%, rgba(24,24,22,0.8995973389355743) 49%, rgba(126,117,117,1) 92%);
+    transition: background-color .5s;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  /*
+   * Formatting the header area
+   */
+
+  header {
+    background-color: #000000;
+    height: 35px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  header h1.logo {
+    margin: 05;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    float: left;
+  }
+
+  header h1.logo:hover {
+    color: #808080;
+    text-decoration: none;
+  }
+
+  /*
+   * Center the body content
+   */
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .fixed {
+    position:fixed;
+    color: #000000;
+    bottom: 0px;
+    left: 5px;
+  }
+
+  div.home {
+    padding: 10px 0 30px 0;
+    background-color: #000000;
+    opacity: 1;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+
+  }
+
+  div.about {
+    padding: 10px 0 30px 0;
+    background-color: #000000;
+    opacity: 1;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+  }
+
+
+  h1 {
+     margin: 0;
+     padding: 0;
+     font-family: "Candara", Calibri, Segoe, Optima, Helvetica, Arial, sans-serif;
+     color: #fff;
+     text-align: center;
+  }
+
+  h2 {
+    font-size: 3em;
+    margin-top: 50px;
+    text-align: center;
+    letter-spacing: -2px;
+    margin: auto;
+    color: #000000;
+  }
+
+  h3 {
+    font-size: 1.7em;
+    font-weight: 100;
+    margin-top: 30px;
+    text-align: left;
+    letter-spacing: -1px;
+    color: #000000;
+  }
+  p {
+  text-align: center;
+  }
+
+  .menu {
+    float: left;
+    margin-top: 3px;
+  }
+  .menu span {
+    left: 0;
+    display: inline;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .menu span + span {
+    margin-left: 25px;
+    text-decoration: none;
+  }
+
+  .menu span a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+
+   .popup {
+    text-align: center;
+   }
+
+#main {
+    transition:
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0;
+  background-color: #black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #808080;
+  cursor: pointer;
+}
+
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+@media screen and (max-height: 850px) {
+  .sidenav {padding-top: 255px;}
+  .sidenav a {font-size: 28px; top: 50px;}
+
+}
